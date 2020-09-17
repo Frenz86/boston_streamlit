@@ -50,11 +50,9 @@ def user_input_features():
     features = pd.DataFrame(data, index=[0])
     return features
 
-
 df = user_input_features()
 
 # Main Panel
-
 
 # Print specified input parameters
 st.header('Specified Input parameters')
@@ -75,7 +73,6 @@ st.write('---')
 # https://github.com/slundberg/shap
 explainer = shap.TreeExplainer(model)
 shap_values = explainer.shap_values(X)
-
 
 st.header('Feature Importance')
 plt.title('Feature importance based on SHAP values')
